@@ -122,7 +122,7 @@ namespace PBackup
 
         private void backUpBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormBackupBrowser f = new FormBackupBrowser();
+            FormBackupBrowser f = new FormBackupBrowser(BackupDbContext.Destination);
             f.ShowDialog();
         }
     }

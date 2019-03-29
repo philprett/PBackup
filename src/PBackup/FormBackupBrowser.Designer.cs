@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBackupBrowser));
             this.label1 = new System.Windows.Forms.Label();
             this.Grid = new System.Windows.Forms.DataGridView();
-            this.txtDestination = new System.Windows.Forms.TextBox();
-            this.txtPath = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.Filename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastModified = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FileSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BackupVersions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDestination = new System.Windows.Forms.TextBox();
+            this.txtPath = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,46 +72,8 @@
             this.Grid.ReadOnly = true;
             this.Grid.RowHeadersVisible = false;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(804, 397);
+            this.Grid.Size = new System.Drawing.Size(762, 397);
             this.Grid.TabIndex = 2;
-            // 
-            // txtDestination
-            // 
-            this.txtDestination.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDestination.Enabled = false;
-            this.txtDestination.Location = new System.Drawing.Point(106, 12);
-            this.txtDestination.Name = "txtDestination";
-            this.txtDestination.Size = new System.Drawing.Size(713, 20);
-            this.txtDestination.TabIndex = 3;
-            // 
-            // txtPath
-            // 
-            this.txtPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPath.Enabled = false;
-            this.txtPath.Location = new System.Drawing.Point(106, 38);
-            this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(713, 20);
-            this.txtPath.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Path";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Contents";
             // 
             // Filename
             // 
@@ -137,11 +99,49 @@
             this.BackupVersions.Name = "BackupVersions";
             this.BackupVersions.ReadOnly = true;
             // 
+            // txtDestination
+            // 
+            this.txtDestination.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDestination.Enabled = false;
+            this.txtDestination.Location = new System.Drawing.Point(106, 12);
+            this.txtDestination.Name = "txtDestination";
+            this.txtDestination.Size = new System.Drawing.Size(671, 20);
+            this.txtDestination.TabIndex = 3;
+            // 
+            // txtPath
+            // 
+            this.txtPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPath.Enabled = false;
+            this.txtPath.Location = new System.Drawing.Point(106, 38);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(671, 20);
+            this.txtPath.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Path";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Contents";
+            // 
             // FormBackupBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 495);
+            this.ClientSize = new System.Drawing.Size(784, 495);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPath);
@@ -150,6 +150,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormBackupBrowser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup Browser";
             this.Load += new System.EventHandler(this.FormBackupBrowser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();

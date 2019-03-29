@@ -13,10 +13,13 @@ namespace PBackup
     public partial class FormBackupBrowser : Form
     {
         private string destination;
+        private string currentFolder;
+
         public FormBackupBrowser(string destination)
         {
             InitializeComponent();
             this.destination = destination;
+            this.currentFolder = string.Empty;
         }
 
         private void FormBackupBrowser_Load(object sender, EventArgs e)

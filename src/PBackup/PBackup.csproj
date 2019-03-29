@@ -105,6 +105,10 @@
     <Compile Include="FormBackupBrowser.Designer.cs">
       <DependentUpon>FormBackupBrowser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBackupBrowserController.cs">
+      <DependentUpon>FormBackupBrowser.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LongFilenames\LongDirectory.cs" />
     <Compile Include="LongFilenames\LongFile.cs" />
     <Compile Include="LongFilenames\NativeMethods.cs" />
