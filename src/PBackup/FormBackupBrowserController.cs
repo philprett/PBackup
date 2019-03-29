@@ -1,4 +1,5 @@
 ﻿using PBackup.Data;
+using PBackup.LongFilenames;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,8 @@ namespace PBackup
                         if (thisPath.Contains("\\")) thisPath = thisPath.Substring(0, thisPath.IndexOf("\\"));
                         if (includedPaths.FirstOrDefault(p => p == thisPath) != null) continue;
                         includedPaths.Add(thisPath);
+
+                        string thisFilePath = LongFile.Combine(currentFolder, thisPath);
 
                         gridItems.Add(new BackupBrowserGridItem()
                         {
