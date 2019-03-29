@@ -90,6 +90,7 @@ namespace PBackup.Data
                     backupFile = new BackupFile
                     {
                         Path = Path,
+                        BackupFileType = BackupFileType.File,
                         LastModified = currentFileTimestamp,
                         Size = LongFile.GetFileSize(Path),
                         BackupTimestamp = DateTime.Now,

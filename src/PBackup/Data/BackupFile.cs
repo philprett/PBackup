@@ -12,6 +12,7 @@ namespace PBackup.Data
     {
         [Key]
         public long Id { get; set; }
+        public BackupFileType BackupFileType { get; set; }
         public string Path { get; set; }
         public DateTime LastModified { get; set; }
         public long Size { get; set; }
@@ -23,6 +24,7 @@ namespace PBackup.Data
         public BackupFile() : base()
         {
             Id.SetRandom();
+            BackupFileType = BackupFileType.Unknown;
             Path = string.Empty;
             LastModified = DateTime.MinValue;
             Size = 0;

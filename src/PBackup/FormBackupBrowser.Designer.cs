@@ -39,6 +39,7 @@
             this.txtPath = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.butUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,13 +68,15 @@
             this.LastModified,
             this.FileSize,
             this.BackupVersions});
-            this.Grid.Location = new System.Drawing.Point(15, 86);
+            this.Grid.GridColor = System.Drawing.Color.White;
+            this.Grid.Location = new System.Drawing.Point(15, 94);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.RowHeadersVisible = false;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(762, 397);
+            this.Grid.Size = new System.Drawing.Size(762, 389);
             this.Grid.TabIndex = 2;
+            this.Grid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grid_CellContentDoubleClick);
             // 
             // Filename
             // 
@@ -131,17 +134,28 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 70);
+            this.label3.Location = new System.Drawing.Point(12, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Contents";
+            // 
+            // butUp
+            // 
+            this.butUp.Location = new System.Drawing.Point(67, 65);
+            this.butUp.Name = "butUp";
+            this.butUp.Size = new System.Drawing.Size(33, 23);
+            this.butUp.TabIndex = 7;
+            this.butUp.Text = "Up";
+            this.butUp.UseVisualStyleBackColor = true;
+            this.butUp.Click += new System.EventHandler(this.butUp_Click);
             // 
             // FormBackupBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 495);
+            this.Controls.Add(this.butUp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPath);
@@ -171,5 +185,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LastModified;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn BackupVersions;
+        private System.Windows.Forms.Button butUp;
     }
 }

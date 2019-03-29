@@ -90,6 +90,7 @@ namespace PBackup.Data
                 "CREATE TABLE IF NOT EXISTS BackupFile " +
                 "(" +
                 "Id INTEGER NOT NULL PRIMARY KEY, " +
+                "BackupFileType INTEGER NOT NULL, " +
                 "Path TEXT NOT NULL, " +
                 "LastModified DATETIME NOT NULL," +
                 "Size INTEGER NOT NULL," +

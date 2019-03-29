@@ -67,8 +67,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\BackupBrowserGridItem.cs" />
     <Compile Include="Data\BackupDbContext.cs" />
     <Compile Include="Data\BackupFile.cs" />
+    <Compile Include="Data\BackupFileType.cs" />
     <Compile Include="Data\Configuration.cs" />
     <Compile Include="Data\ExcludePath.cs" />
     <Compile Include="Data\FFile.cs" />
