@@ -93,11 +93,17 @@
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddIncludeMask.cs">
+    <Compile Include="FormAddExcludeText.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddIncludeMask.Designer.cs">
-      <DependentUpon>FormAddIncludeMask.cs</DependentUpon>
+    <Compile Include="FormAddExcludeText.Designer.cs">
+      <DependentUpon>FormAddExcludeText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBackupBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBackupBrowser.Designer.cs">
+      <DependentUpon>FormBackupBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="LongFilenames\LongDirectory.cs" />
     <Compile Include="LongFilenames\LongFile.cs" />
@@ -108,6 +114,12 @@
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddExcludeText.resx">
+      <DependentUpon>FormAddExcludeText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBackupBrowser.resx">
+      <DependentUpon>FormBackupBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

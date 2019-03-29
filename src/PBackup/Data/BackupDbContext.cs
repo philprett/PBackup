@@ -94,7 +94,9 @@ namespace PBackup.Data
                 "LastModified DATETIME NOT NULL," +
                 "Size INTEGER NOT NULL," +
                 "BackupTimestamp DATETIME NOT NULL, " +
-                "BackupLocation TEXT NOT NULL " +
+                "BackupLocation TEXT NOT NULL, " +
+                "Parent TEXT NOT NULL, " +
+                "Name TEXT NOT NULL " +
                 ")");
         }
 

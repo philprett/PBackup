@@ -31,15 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.butIncludeAddFile = new System.Windows.Forms.Button();
-            this.butIncludeDelete = new System.Windows.Forms.Button();
-            this.butIncludeAddFolder = new System.Windows.Forms.Button();
             this.lstIncludes = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.butExcludeAddText = new System.Windows.Forms.Button();
-            this.butExcludeAddFile = new System.Windows.Forms.Button();
-            this.butExcludeAddFolder = new System.Windows.Forms.Button();
-            this.butExcludeDelete = new System.Windows.Forms.Button();
             this.lstExcludes = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,13 +45,20 @@
             this.txtRunEvery = new System.Windows.Forms.TextBox();
             this.chkRunEvery = new System.Windows.Forms.CheckBox();
             this.lblBackupStatus1 = new System.Windows.Forms.Label();
-            this.butDestinationBrowse = new System.Windows.Forms.Button();
             this.txtDestination = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.butIncludeAddFile = new System.Windows.Forms.Button();
+            this.butIncludeDelete = new System.Windows.Forms.Button();
+            this.butIncludeAddFolder = new System.Windows.Forms.Button();
+            this.butExcludeAddText = new System.Windows.Forms.Button();
+            this.butExcludeAddFile = new System.Windows.Forms.Button();
+            this.butExcludeAddFolder = new System.Windows.Forms.Button();
+            this.butExcludeDelete = new System.Windows.Forms.Button();
+            this.butDestinationBrowse = new System.Windows.Forms.Button();
             this.runBackupNowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopBackupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backedUpFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backUpBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -124,39 +124,6 @@
             this.splitContainer2.SplitterDistance = 376;
             this.splitContainer2.TabIndex = 0;
             // 
-            // butIncludeAddFile
-            // 
-            this.butIncludeAddFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butIncludeAddFile.Image = global::PBackup.Properties.Resources.page_add;
-            this.butIncludeAddFile.Location = new System.Drawing.Point(38, 159);
-            this.butIncludeAddFile.Name = "butIncludeAddFile";
-            this.butIncludeAddFile.Size = new System.Drawing.Size(26, 26);
-            this.butIncludeAddFile.TabIndex = 5;
-            this.butIncludeAddFile.UseVisualStyleBackColor = true;
-            this.butIncludeAddFile.Click += new System.EventHandler(this.butIncludeAddFile_Click);
-            // 
-            // butIncludeDelete
-            // 
-            this.butIncludeDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butIncludeDelete.Image = global::PBackup.Properties.Resources.delete;
-            this.butIncludeDelete.Location = new System.Drawing.Point(70, 159);
-            this.butIncludeDelete.Name = "butIncludeDelete";
-            this.butIncludeDelete.Size = new System.Drawing.Size(26, 26);
-            this.butIncludeDelete.TabIndex = 4;
-            this.butIncludeDelete.UseVisualStyleBackColor = true;
-            this.butIncludeDelete.Click += new System.EventHandler(this.butIncludeDelete_Click);
-            // 
-            // butIncludeAddFolder
-            // 
-            this.butIncludeAddFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butIncludeAddFolder.Image = global::PBackup.Properties.Resources.folder_add;
-            this.butIncludeAddFolder.Location = new System.Drawing.Point(6, 159);
-            this.butIncludeAddFolder.Name = "butIncludeAddFolder";
-            this.butIncludeAddFolder.Size = new System.Drawing.Size(26, 26);
-            this.butIncludeAddFolder.TabIndex = 2;
-            this.butIncludeAddFolder.UseVisualStyleBackColor = true;
-            this.butIncludeAddFolder.Click += new System.EventHandler(this.butIncludeAddFolder_Click);
-            // 
             // lstIncludes
             // 
             this.lstIncludes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -178,50 +145,6 @@
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Include";
-            // 
-            // butExcludeAddText
-            // 
-            this.butExcludeAddText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butExcludeAddText.Image = global::PBackup.Properties.Resources.add;
-            this.butExcludeAddText.Location = new System.Drawing.Point(70, 159);
-            this.butExcludeAddText.Name = "butExcludeAddText";
-            this.butExcludeAddText.Size = new System.Drawing.Size(26, 26);
-            this.butExcludeAddText.TabIndex = 11;
-            this.butExcludeAddText.UseVisualStyleBackColor = true;
-            this.butExcludeAddText.Click += new System.EventHandler(this.butExcludeAddText_Click);
-            // 
-            // butExcludeAddFile
-            // 
-            this.butExcludeAddFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butExcludeAddFile.Image = global::PBackup.Properties.Resources.page_add;
-            this.butExcludeAddFile.Location = new System.Drawing.Point(38, 159);
-            this.butExcludeAddFile.Name = "butExcludeAddFile";
-            this.butExcludeAddFile.Size = new System.Drawing.Size(26, 26);
-            this.butExcludeAddFile.TabIndex = 10;
-            this.butExcludeAddFile.UseVisualStyleBackColor = true;
-            this.butExcludeAddFile.Click += new System.EventHandler(this.butExcludeAddFile_Click);
-            // 
-            // butExcludeAddFolder
-            // 
-            this.butExcludeAddFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butExcludeAddFolder.Image = global::PBackup.Properties.Resources.folder_add;
-            this.butExcludeAddFolder.Location = new System.Drawing.Point(6, 159);
-            this.butExcludeAddFolder.Name = "butExcludeAddFolder";
-            this.butExcludeAddFolder.Size = new System.Drawing.Size(26, 26);
-            this.butExcludeAddFolder.TabIndex = 9;
-            this.butExcludeAddFolder.UseVisualStyleBackColor = true;
-            this.butExcludeAddFolder.Click += new System.EventHandler(this.butExcludeAddFolder_Click);
-            // 
-            // butExcludeDelete
-            // 
-            this.butExcludeDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.butExcludeDelete.Image = global::PBackup.Properties.Resources.delete;
-            this.butExcludeDelete.Location = new System.Drawing.Point(102, 159);
-            this.butExcludeDelete.Name = "butExcludeDelete";
-            this.butExcludeDelete.Size = new System.Drawing.Size(26, 26);
-            this.butExcludeDelete.TabIndex = 8;
-            this.butExcludeDelete.UseVisualStyleBackColor = true;
-            this.butExcludeDelete.Click += new System.EventHandler(this.butExcludeDelete_Click);
             // 
             // lstExcludes
             // 
@@ -359,17 +282,6 @@
             this.lblBackupStatus1.TabIndex = 0;
             this.lblBackupStatus1.Text = "                                                 ";
             // 
-            // butDestinationBrowse
-            // 
-            this.butDestinationBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.butDestinationBrowse.Image = global::PBackup.Properties.Resources.pencil;
-            this.butDestinationBrowse.Location = new System.Drawing.Point(724, 4);
-            this.butDestinationBrowse.Name = "butDestinationBrowse";
-            this.butDestinationBrowse.Size = new System.Drawing.Size(26, 26);
-            this.butDestinationBrowse.TabIndex = 7;
-            this.butDestinationBrowse.UseVisualStyleBackColor = true;
-            this.butDestinationBrowse.Click += new System.EventHandler(this.butDestinationBrowse_Click);
-            // 
             // txtDestination
             // 
             this.txtDestination.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -394,13 +306,101 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.runBackupNowToolStripMenuItem,
             this.stopBackupToolStripMenuItem,
-            this.backedUpFilesToolStripMenuItem,
+            this.backUpBrowserToolStripMenuItem,
             this.logToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(753, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // butIncludeAddFile
+            // 
+            this.butIncludeAddFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butIncludeAddFile.Image = global::PBackup.Properties.Resources.page_add;
+            this.butIncludeAddFile.Location = new System.Drawing.Point(38, 159);
+            this.butIncludeAddFile.Name = "butIncludeAddFile";
+            this.butIncludeAddFile.Size = new System.Drawing.Size(26, 26);
+            this.butIncludeAddFile.TabIndex = 5;
+            this.butIncludeAddFile.UseVisualStyleBackColor = true;
+            this.butIncludeAddFile.Click += new System.EventHandler(this.butIncludeAddFile_Click);
+            // 
+            // butIncludeDelete
+            // 
+            this.butIncludeDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butIncludeDelete.Image = global::PBackup.Properties.Resources.delete;
+            this.butIncludeDelete.Location = new System.Drawing.Point(70, 159);
+            this.butIncludeDelete.Name = "butIncludeDelete";
+            this.butIncludeDelete.Size = new System.Drawing.Size(26, 26);
+            this.butIncludeDelete.TabIndex = 4;
+            this.butIncludeDelete.UseVisualStyleBackColor = true;
+            this.butIncludeDelete.Click += new System.EventHandler(this.butIncludeDelete_Click);
+            // 
+            // butIncludeAddFolder
+            // 
+            this.butIncludeAddFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butIncludeAddFolder.Image = global::PBackup.Properties.Resources.folder_add;
+            this.butIncludeAddFolder.Location = new System.Drawing.Point(6, 159);
+            this.butIncludeAddFolder.Name = "butIncludeAddFolder";
+            this.butIncludeAddFolder.Size = new System.Drawing.Size(26, 26);
+            this.butIncludeAddFolder.TabIndex = 2;
+            this.butIncludeAddFolder.UseVisualStyleBackColor = true;
+            this.butIncludeAddFolder.Click += new System.EventHandler(this.butIncludeAddFolder_Click);
+            // 
+            // butExcludeAddText
+            // 
+            this.butExcludeAddText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butExcludeAddText.Image = global::PBackup.Properties.Resources.add;
+            this.butExcludeAddText.Location = new System.Drawing.Point(70, 159);
+            this.butExcludeAddText.Name = "butExcludeAddText";
+            this.butExcludeAddText.Size = new System.Drawing.Size(26, 26);
+            this.butExcludeAddText.TabIndex = 11;
+            this.butExcludeAddText.UseVisualStyleBackColor = true;
+            this.butExcludeAddText.Click += new System.EventHandler(this.butExcludeAddText_Click);
+            // 
+            // butExcludeAddFile
+            // 
+            this.butExcludeAddFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butExcludeAddFile.Image = global::PBackup.Properties.Resources.page_add;
+            this.butExcludeAddFile.Location = new System.Drawing.Point(38, 159);
+            this.butExcludeAddFile.Name = "butExcludeAddFile";
+            this.butExcludeAddFile.Size = new System.Drawing.Size(26, 26);
+            this.butExcludeAddFile.TabIndex = 10;
+            this.butExcludeAddFile.UseVisualStyleBackColor = true;
+            this.butExcludeAddFile.Click += new System.EventHandler(this.butExcludeAddFile_Click);
+            // 
+            // butExcludeAddFolder
+            // 
+            this.butExcludeAddFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butExcludeAddFolder.Image = global::PBackup.Properties.Resources.folder_add;
+            this.butExcludeAddFolder.Location = new System.Drawing.Point(6, 159);
+            this.butExcludeAddFolder.Name = "butExcludeAddFolder";
+            this.butExcludeAddFolder.Size = new System.Drawing.Size(26, 26);
+            this.butExcludeAddFolder.TabIndex = 9;
+            this.butExcludeAddFolder.UseVisualStyleBackColor = true;
+            this.butExcludeAddFolder.Click += new System.EventHandler(this.butExcludeAddFolder_Click);
+            // 
+            // butExcludeDelete
+            // 
+            this.butExcludeDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.butExcludeDelete.Image = global::PBackup.Properties.Resources.delete;
+            this.butExcludeDelete.Location = new System.Drawing.Point(102, 159);
+            this.butExcludeDelete.Name = "butExcludeDelete";
+            this.butExcludeDelete.Size = new System.Drawing.Size(26, 26);
+            this.butExcludeDelete.TabIndex = 8;
+            this.butExcludeDelete.UseVisualStyleBackColor = true;
+            this.butExcludeDelete.Click += new System.EventHandler(this.butExcludeDelete_Click);
+            // 
+            // butDestinationBrowse
+            // 
+            this.butDestinationBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.butDestinationBrowse.Image = global::PBackup.Properties.Resources.pencil;
+            this.butDestinationBrowse.Location = new System.Drawing.Point(724, 4);
+            this.butDestinationBrowse.Name = "butDestinationBrowse";
+            this.butDestinationBrowse.Size = new System.Drawing.Size(26, 26);
+            this.butDestinationBrowse.TabIndex = 7;
+            this.butDestinationBrowse.UseVisualStyleBackColor = true;
+            this.butDestinationBrowse.Click += new System.EventHandler(this.butDestinationBrowse_Click);
             // 
             // runBackupNowToolStripMenuItem
             // 
@@ -419,12 +419,13 @@
             this.stopBackupToolStripMenuItem.Text = "Stop Backup";
             this.stopBackupToolStripMenuItem.Click += new System.EventHandler(this.stopBackupToolStripMenuItem_Click);
             // 
-            // backedUpFilesToolStripMenuItem
+            // backUpBrowserToolStripMenuItem
             // 
-            this.backedUpFilesToolStripMenuItem.Image = global::PBackup.Properties.Resources.zoom;
-            this.backedUpFilesToolStripMenuItem.Name = "backedUpFilesToolStripMenuItem";
-            this.backedUpFilesToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
-            this.backedUpFilesToolStripMenuItem.Text = "Backed Up Files";
+            this.backUpBrowserToolStripMenuItem.Image = global::PBackup.Properties.Resources.zoom;
+            this.backUpBrowserToolStripMenuItem.Name = "backUpBrowserToolStripMenuItem";
+            this.backUpBrowserToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.backUpBrowserToolStripMenuItem.Text = "Backup Browser";
+            this.backUpBrowserToolStripMenuItem.Click += new System.EventHandler(this.backUpBrowserToolStripMenuItem_Click);
             // 
             // logToolStripMenuItem
             // 
@@ -444,6 +445,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(628, 386);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PBackup";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -496,7 +498,7 @@
         private System.Windows.Forms.Label lblBackupStatus1;
         private System.Windows.Forms.ToolStripMenuItem runBackupNowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stopBackupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backedUpFilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backUpBrowserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logToolStripMenuItem;
         private System.Windows.Forms.Label lblBackupStatus2;
     }

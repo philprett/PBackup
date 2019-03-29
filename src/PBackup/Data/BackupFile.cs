@@ -17,6 +17,8 @@ namespace PBackup.Data
         public long Size { get; set; }
         public DateTime BackupTimestamp { get; set; }
         public string BackupLocation { get; set; }
+        public string Parent { get; set; }
+        public string Name { get; set; }
 
         public BackupFile() : base()
         {
@@ -26,6 +28,8 @@ namespace PBackup.Data
             Size = 0;
             BackupTimestamp = DateTime.MinValue;
             BackupLocation = string.Empty;
+            Parent = string.Empty;
+            Name = string.Empty;
         }
 
     }

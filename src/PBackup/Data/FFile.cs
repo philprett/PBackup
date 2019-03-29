@@ -94,6 +94,8 @@ namespace PBackup.Data
                         Size = LongFile.GetFileSize(Path),
                         BackupTimestamp = DateTime.Now,
                         BackupLocation = GetBackupLocation(),
+                        Parent = LongFile.GetParent(Path),
+                        Name = LongFile.GetName(Path),
                     };
                     string destPath = LongFile.Combine(BackupDbContext.Destination, LongFile.Combine("Files", backupFile.BackupLocation));
                     string destFolder = LongFile.GetParent(destPath);

@@ -117,7 +117,13 @@ namespace PBackup
 
         private void butExcludeAddText_Click(object sender, EventArgs e)
         {
+            ExcludeAddMask();
+        }
 
+        private void backUpBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBackupBrowser f = new FormBackupBrowser();
+            f.ShowDialog();
         }
     }
 }

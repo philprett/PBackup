@@ -73,6 +73,17 @@ namespace PBackup
             }
         }
 
+        public void ExcludeAddMask()
+        {
+            FormAddExcludeText f = new FormAddExcludeText();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                MainDbContext.DB.ExcludePaths.Add(new ExcludePath { Path = f.Mask });
+                MainDbContext.DB.SaveChanges();
+                RefreshFromDB();
+            }
+        }
+
         public void ExcludeDelete()
         {
             if (lstExcludes.SelectedItem != null)
