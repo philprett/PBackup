@@ -46,7 +46,7 @@ namespace PBackup.Data
         {
             string folder = LongFile.GetParent(Path).Replace(":", "");
             string filename = LongFile.GetNameWithoutExtension(Path);
-            string fileLastModified = LongFile.GetLastWriteTime(Path).ToLocalTime().ToString("yyyyMMddhhmmss");
+            string fileLastModified = LongFile.GetLastWriteTime(Path).ToLocalTime().ToString("yyyyMMdd_hhmmss");
             string extension = LongFile.GetExtension(Path);
 
             return LongFile.Combine(

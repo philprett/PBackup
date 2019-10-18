@@ -20,5 +20,22 @@ namespace PBackup.Data
             Name = string.Empty;
             Value = string.Empty;
         }
-    }
+
+		public static Configuration Set (string name, string value = "")
+		{
+			Configuration conf = MainDbContext.DB.Configurations.FirstOrDefault(c => c.Name == name);
+			if (conf== null)
+			{
+				conf = new Configuration { Name = name, Value = value };
+			}
+			else
+			{
+				conf.Value = value;
+			}
+			MainDbContext.DB.Configurations.Add(conf);
+			MainDbContext.DB.SaveChanges();
+
+			return conf;
+		}
+	}
 }

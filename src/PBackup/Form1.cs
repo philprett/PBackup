@@ -69,10 +69,14 @@ namespace PBackup
 
         private void butDestinationBrowse_Click(object sender, EventArgs e)
         {
-            ChangeDestination();
-        }
+			ChangeDestination(txtDestination);
+		}
+		private void butDestination2Browse_Click(object sender, EventArgs e)
+		{
+			ChangeDestination(txtDestination2);
+		}
 
-        private void stopBackupToolStripMenuItem_Click(object sender, EventArgs e)
+		private void stopBackupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StopBackup();
         }
@@ -125,5 +129,6 @@ namespace PBackup
             FormBackupBrowser f = new FormBackupBrowser(BackupDbContext.Destination);
             f.ShowDialog();
         }
-    }
+
+	}
 }
